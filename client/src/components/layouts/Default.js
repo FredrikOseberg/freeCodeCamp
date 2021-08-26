@@ -116,6 +116,19 @@ class DefaultLayout extends Component {
     window.removeEventListener('offline', this.updateOnlineStatus);
   }
 
+  fetchFeatureToggleConfiguration = () => {
+    fetch('https://api.github.com/gists/78688e845e358558813aa5f9c39b28c8')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        const parsedData = JSON.parse(
+          data.files['feature-configuration'].content
+        );
+        console.log(parsedData);
+      });
+  };
+
   updateOnlineStatus = () => {
     const { onlineStatusChange } = this.props;
     const isOnline =

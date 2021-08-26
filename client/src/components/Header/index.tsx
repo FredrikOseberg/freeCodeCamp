@@ -5,6 +5,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import { NEW_DESIGN_ON } from '../../flags';
 import UniversalNav from './components/universal-nav';
 
 import './header.css';
@@ -59,21 +60,24 @@ export class Header extends React.Component<
   render(): JSX.Element {
     const { displayMenu } = this.state;
     const { fetchState, user } = this.props;
+
+    const navigation = NEW_DESIGN_ON ? null : (
+      <UniversalNav
+        displayMenu={displayMenu}
+        fetchState={fetchState}
+        menuButtonRef={this.menuButtonRef}
+        searchBarRef={this.searchBarRef}
+        toggleDisplayMenu={this.toggleDisplayMenu}
+        user={user}
+      />
+    );
+
     return (
       <>
         <Helmet>
           <style>{':root{--header-height: 38px}'}</style>
         </Helmet>
-        <header>
-          {/* <UniversalNav
-            displayMenu={displayMenu}
-            fetchState={fetchState}
-            menuButtonRef={this.menuButtonRef}
-            searchBarRef={this.searchBarRef}
-            toggleDisplayMenu={this.toggleDisplayMenu}
-            user={user}
-          /> */}
-        </header>
+        <header>{navigation}</header>
       </>
     );
   }

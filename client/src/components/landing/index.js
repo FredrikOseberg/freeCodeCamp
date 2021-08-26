@@ -4,6 +4,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
+import { NEW_DESIGN_ON } from '../../flags';
 import AsSeenIn from './components/AsSeenIn';
 import Certifications from './components/Certifications';
 import LandingTop from './components/LandingTop';
@@ -19,20 +20,26 @@ const propTypes = {
 export const Landing = ({ page = 'landing' }) => {
   const { t } = useTranslation();
 
+  const landingTopComponent = NEW_DESIGN_ON ? (
+    <div className='landing-page-new-hero'>
+      <Grid>
+        <LandingTopV2 page={page} />
+      </Grid>
+    </div>
+  ) : (
+    <Grid>
+      <LandingTop page={page} />
+    </Grid>
+  );
+
   return (
     <>
       <Helmet>
         <title>{t('metaTags:title')}</title>
       </Helmet>
       <main className='landing-page'>
-        <div className='landing-page-new-hero'>
-          <Grid>
-            <LandingTopV2 page={page} />
-          </Grid>
-        </div>
-        <Grid>
-          <LandingTop page={page} />
-        </Grid>
+        {landingTopComponent}
+
         <Grid fluid={true}>
           <AsSeenIn />
         </Grid>

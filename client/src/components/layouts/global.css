@@ -47,7 +47,7 @@ body {
 
 .default-layout {
   flex: 1 0 auto;
-  margin-top: var(--header-height, 0px);
+  /* margin-top: var(--header-height, 0px); */
   background: var(--secondary-background);
 }
 

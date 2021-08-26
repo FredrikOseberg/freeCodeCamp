@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import AsSeenIn from './components/AsSeenIn';
 import Certifications from './components/Certifications';
 import LandingTop from './components/LandingTop';
+import LandingTopV2 from './components/LandingTopV2';
 import Testimonials from './components/Testimonials';
 
 import './landing.css';
@@ -24,6 +25,11 @@ export const Landing = ({ page = 'landing' }) => {
         <title>{t('metaTags:title')}</title>
       </Helmet>
       <main className='landing-page'>
+        <div className='landing-page-new-hero'>
+          <Grid>
+            <LandingTopV2 page={page} />
+          </Grid>
+        </div>
         <Grid>
           <LandingTop page={page} />
         </Grid>

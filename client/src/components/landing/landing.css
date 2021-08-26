@@ -53,6 +53,190 @@ p.caption {
   display: none !important;
 }
 
+.landing-page-new-hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, #5c7688, #0a0a23);
+}
+
+.landing-top-v2-search-container {
+  position: relative;
+}
+
+.landing-top-v2-search-container img {
+  position: absolute;
+  left: 35px;
+  top: 8px;
+  width: 23px;
+  height: 23px;
+}
+
+.landing-top-v2-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-top-v2-header-left-content {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.landing-top-v2-header-left-content span {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.landing-top-v2-header-left-content input {
+  margin-left: 20px;
+  border-radius: 25px;
+  padding: 0.8rem;
+  font-family: Lato;
+  padding: 0.4rem 1rem 0.4rem 3rem;
+  border: none;
+  font-size: 1rem;
+  background-color: rgba(11, 14, 37, 0.48);
+}
+
+.landing-top-v2-header-left-content input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.landing-top-v2-nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.landing-top-v2-nav-btn {
+  background-color: #13233e;
+  padding: 0.6rem;
+  border-radius: 25px;
+  display: block;
+  text-align: center;
+  width: 175px;
+}
+
+.landing-top-v2-buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.landing-top-v2-body {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6rem;
+}
+
+.landing-top-v2-body-content-left,
+.landing-top-v2-body-content-right {
+  width: 45%;
+}
+
+.landing-top-v2-body-content-left {
+  color: #fff;
+  position: relative;
+}
+
+.landing-top-v2-body-content-wm {
+  position: absolute;
+  top: 74px;
+  left: -140px;
+  width: 500px;
+  z-index: 100;
+}
+
+.landing-top-v2-body-content-left-header {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  z-index: 200;
+  position: relative;
+}
+
+#landing-top-v2-body-content-left-paragraph {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  z-index: 200;
+  position: relative;
+}
+
+.landing-top-v2-body-content-left-cta {
+  display: block;
+  width: 325px;
+  font-family: Lato;
+  color: #13213b;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 0.7rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  z-index: 200;
+  position: relative;
+}
+
+.landing-top-v2-body-content-certificate-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.landing-top-v2-body-certificate-header {
+  color: #fff;
+  font-family: Lato;
+  font-weight: medium;
+  margin-top: 2.5rem;
+}
+
+#landing-top-v2-body-certificate-paragraph {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.landing-top-v2-graduates {
+  position: relative;
+  z-index: 300;
+  transform: translateY(-25px);
+}
+
+.landing-top-v2-logos-container {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+#landing-top-v2-graduates-header {
+  color: #fff;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.landing-top-v2-graduates-logo {
+  max-width: 150px;
+}
+
+.landing-top-v2-graduates-logo-microsoft {
+  max-width: 200px;
+}
+
+.landing-top-v2-graduates-logo-apple {
+  width: 75px;
+}
+
 @media (min-width: 1200px) {
   .campers-images {
     display: inline-block !important;
@@ -181,6 +365,10 @@ p.caption {
 .certification-section,
 .testimonials {
   padding: 4vw 0;
+}
+
+.landing-top {
+  padding: 1.5rem 0;
 }
 
 .map-ui .btn {

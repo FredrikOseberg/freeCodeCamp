@@ -65,14 +65,14 @@ export class Header extends React.Component<
           <style>{':root{--header-height: 38px}'}</style>
         </Helmet>
         <header>
-          <UniversalNav
+          {/* <UniversalNav
             displayMenu={displayMenu}
             fetchState={fetchState}
             menuButtonRef={this.menuButtonRef}
             searchBarRef={this.searchBarRef}
             toggleDisplayMenu={this.toggleDisplayMenu}
             user={user}
-          />
+          /> */}
         </header>
       </>
     );
